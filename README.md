@@ -1,46 +1,15 @@
-# 👋 Hola, sóc Jordi Corbalán
+# Portfolio Website - Jordi Corbalán
 
-**Data Scientist & Analista de Dades**
+Aquest repositori conté el codi font de la meva pàgina web personal.
 
----
+🔗 **Visita la web:** [https://jcorbalanv.github.io](https://jcorbalanv.github.io)
 
-## 🧑‍💻 Sobre mi
+## 🛠️ Tecnologies
 
-Sóc un professional apassionat per les dades, l'anàlisi i la tecnologia. M'agrada transformar dades en coneixement i crear solucions que generin impacte.
+- HTML5
+- CSS3 (Variables, Glassmorphism, Flexbox/Grid)
+- GitHub Pages
 
----
+## 🚀 Desplegament
 
-## 🛠️ Habilitats
-
-- **Llenguatges:** Python, SQL, R
-- **Eines:** Pandas, NumPy, Scikit-learn, TensorFlow
-- **Visualització:** Matplotlib, Seaborn, Altair, Plotly
-- **Bases de dades:** PostgreSQL, MySQL
-- **Altres:** Git, Docker, Airflow
-
----
-
-## 📂 Projectes Destacats
-
-| Projecte | Descripció |
-|----------|------------|
-| [Aviation Fleet Analytics](https://github.com/jordicorbalanvilaplana/projects) | Anàlisi de flotes d'aviació amb Big Data |
-| [Predicció de Malalties Cardíaques](#) | Model de Machine Learning per a diagnòstic mèdic |
-
----
-
-## 📫 Contacte
-
-- 📧 Email: [el-teu-email@example.com](mailto:el-teu-email@example.com)
-- 💼 LinkedIn: [linkedin.com/in/el-teu-perfil](https://linkedin.com/in/)
-- 🐙 GitHub: [github.com/jcorbalan](https://github.com/jcorbalan)
-
----
-
-## 📍 Ubicació
-
-Barcelona, Catalunya 🇪🇸
-
----
-
-*Aquesta pàgina es genera automàticament amb [GitHub Pages](https://pages.github.com/).*
+La pàgina es desplega automàticament mitjançant GitHub Pages des de la branca `main`.
