@@ -14,6 +14,15 @@
   /* Slate 200 */
   --card-bg: #ffffff;
   --mono-font: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+
+  /* Visual Enhancements */
+  --gradient-title: linear-gradient(135deg, #1e293b 0%, #0f766e 100%);
+  --tag-bg: #eff6ff;
+  /* Light Indigo/Blue - very subtle */
+  --tag-text: #1e40af;
+  /* Dark Indigo/Blue */
+  --bg-gradient: radial-gradient(circle at top right, #f1f5f9, transparent 40%),
+    radial-gradient(circle at bottom left, #f0fdfa, transparent 40%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +41,14 @@
     --border-color: #1e293b;
     /* Slate 800 */
     --card-bg: #1e293b;
+
+    --gradient-title: linear-gradient(135deg, #f1f5f9 0%, #2dd4bf 100%);
+    --tag-bg: #1e293b;
+    --tag-text: #60a5fa;
+    /* Blue 400 */
+    --bg-gradient: radial-gradient(circle at top right, #1e293b, transparent 40%),
+      radial-gradient(circle at bottom left, #134e4a, transparent 40%);
+    /* Darker teal hint */
   }
 }
 
@@ -44,6 +61,9 @@
 body {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-color);
+  background-image: var(--bg-gradient);
+  /* Subtle background mesh */
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
   max-width: 850px;
@@ -59,6 +79,14 @@ h1 {
   letter-spacing: -0.03em;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
+
+  /* Gradient Title */
+  background: var(--gradient-title);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  /* Required for clip to work nicely */
 }
 
 .tagline {
@@ -97,6 +125,9 @@ a {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .social-links a:hover {
@@ -131,13 +162,15 @@ section {
   border-radius: 12px;
   /* Softened corners */
   transition: all 0.3s ease;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Semi-transparent for mesh to show */
+  backdrop-filter: blur(5px);
 }
 
 .project-item:hover {
   border-color: var(--accent-color);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
 }
 
 .project-title a {
@@ -162,20 +195,22 @@ section {
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 .tech-stack span {
   font-family: var(--mono-font);
-  font-size: 0.8rem;
-  background-color: var(--border-color);
-  /* Subtle background */
-  color: var(--text-secondary);
-  padding: 6px 14px;
+  font-size: 0.75rem;
+  /* Slightly smaller for elegance */
+  background-color: var(--tag-bg);
+  /* Colored Background */
+  color: var(--tag-text);
+  /* Colored Text */
+  padding: 4px 12px;
   border-radius: 20px;
   /* Pill shape */
-  font-weight: 500;
-  opacity: 0.8;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 footer {
