@@ -1,117 +1,80 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jordi Corbalán | Data Scientist</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Jordi Corbalan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <main class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>Jordi Corbalán</h1>
-            <p class="tagline">Data Scientist & Analista de Dades</p>
-            <div style="max-width: 700px; margin: 0 auto; opacity: 0.9;">
-                <p>Transformant dades en solucions reals i impacte mesurable. Sóc un professional apassionat per
-                    l'anàlisi i la tecnologia, especialitzat en crear models predictius i visualitzacions.</p>
-            </div>
+    <header>
+        <h1>Jordi Corbalan</h1>
+        <p class="tagline">Data Scientist & Data Analyst</p>
+        <p class="bio">
+            Transforming data into real solutions. Passionate about analysis, technology, and building predictive models
+            that drive decisions.
+        </p>
 
-            <div class="social-links" style="justify-content: center; margin-top: 1.5rem;">
-                <a href="mailto:el-teu-email@example.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://github.com/jordicorbalanvilaplana" target="_blank" aria-label="GitHub"><i
-                        class="fa-brands fa-github"></i></a>
-                <a href="https://linkedin.com/in/" target="_blank" aria-label="LinkedIn"><i
-                        class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </section>
+        <div class="social-links">
+            <a href="mailto:el-teu-email@example.com">Email</a>
+            <a href="https://github.com/jordicorbalanvilaplana" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+        </div>
+    </header>
 
-        <!-- Skills Section -->
-        <section id="skills" style="padding-top: 0;">
-            <h2>Habilitats Tècniques</h2>
-            <div class="grid">
-                <div class="card">
-                    <i class="fa-solid fa-code fa-2x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
-                    <h3>Desenvolupament</h3>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">R</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Git</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-brain fa-2x" style="margin-bottom: 1rem; color: var(--accent-color);"></i>
-                    <h3>Data Science</h3>
-                    <div class="tags">
-                        <span class="tag">Pandas</span>
-                        <span class="tag">NumPy</span>
-                        <span class="tag">Scikit-learn</span>
-                        <span class="tag">TensorFlow</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-chart-simple fa-2x"
-                        style="margin-bottom: 1rem; color: var(--accent-color);"></i>
-                    <h3>Visualització</h3>
-                    <div class="tags">
-                        <span class="tag">Matplotlib</span>
-                        <span class="tag">Seaborn</span>
-                        <span class="tag">Altair</span>
-                        <span class="tag">Plotly</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
+    <main>
         <section id="projects">
-            <h2>Projectes Destacats</h2>
-            <div class="grid">
-                <!-- Project 1 -->
-                <article class="card">
-                    <h3>Aviation Fleet Analytics</h3>
-                    <p>Sistema d'anàlisi de dades massives per a flotes d'aviació, optimitzant el manteniment i
-                        l'eficiència operativa mitjançant Big Data.</p>
-                    <br>
-                    <a href="https://github.com/jordicorbalanvilaplana/projects" target="_blank"
-                        style="color: var(--accent-color); text-decoration: none;">Veure a GitHub →</a>
+            <h2>Selected Projects</h2>
+            <div class="project-list">
+                <article class="project-item">
+                    <div class="project-title">
+                        <a href="https://github.com/jordicorbalanvilaplana/projects" target="_blank">Aviation Fleet
+                            Analytics</a>
+                    </div>
+                    <p class="project-desc">Big Data analytics system for aviation fleets, optimizing maintenance and
+                        operational efficiency.</p>
                 </article>
 
-                <!-- Project 2 -->
-                <article class="card">
-                    <h3>Predicció de Malalties</h3>
-                    <p>Model de Machine Learning avançat per al diagnòstic precoç de malalties cardíaques utilitzant
-                        tècniques de classificació supervisada.</p>
-                    <br>
-                    <a href="#" style="color: var(--accent-color); text-decoration: none;">Veure detalls →</a>
+                <article class="project-item">
+                    <div class="project-title">
+                        <a href="#">Disease Prediction Model</a>
+                    </div>
+                    <p class="project-desc">Advanced Machine Learning model for early diagnosis of heart diseases using
+                        supervised classification techniques.</p>
                 </article>
 
-                <!-- Project 3 -->
-                <article class="card">
-                    <h3>Dashboard Financer</h3>
-                    <p>Panell de control interactiu per visualitzar mètriques financeres en temps real, construït amb
-                        Streamlit i Plotly.</p>
-                    <br>
-                    <a href="#" style="color: var(--accent-color); text-decoration: none;">En desenvolupament →</a>
+                <article class="project-item">
+                    <div class="project-title">
+                        <a href="#">Financial Dashboard</a>
+                    </div>
+                    <p class="project-desc">Interactive dashboard for real-time financial metrics, built with Streamlit
+                        and Plotly.</p>
                 </article>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <footer>
-            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.7;">&copy; 2026 Jordi Corbalán. Barcelona,
-                Catalunya.</p>
-        </footer>
-
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>R</span>
+                <span>SQL</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Scikit-learn</span>
+                <span>TensorFlow</span>
+                <span>Git</span>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Jordi Corbalan.</p>
+    </footer>
 
 </body>
 

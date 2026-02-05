@@ -1,0 +1,7 @@
+title: Jordi Corbalan
+description: Data Scientist & Data Analyst Portfolio.
+author: Jordi Corbalan
+email: el-teu-email@example.com
+theme: jekyll-theme-minimal # Used as a fallback, but we prevent default styles by using our own CSS
+plugins:
+  - jekyll-seo-tag
