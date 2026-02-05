@@ -72,16 +72,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Typography */
+/* Header */
+header {
+  background: var(--bg-white);
+  padding: 80px 20px 60px;
+  /* Increased vertical padding */
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  /* Use variable */
+}
+
 h1 {
   font-size: 3rem;
+  /* Larger title */
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
-  color: var(--text-primary);
-
+  margin-bottom: 0.75rem;
+  /* Adjusted margin */
   /* Gradient Title */
-  background: var(--gradient-title);
+  background: linear-gradient(135deg, var(--primary-dark), var(--accent));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -90,18 +99,25 @@ h1 {
 }
 
 .tagline {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
+  font-size: 1.35rem;
+  /* Larger */
+  color: var(--accent);
+  /* Changed color */
+  margin-bottom: 1.5rem;
+  /* Adjusted margin */
   font-weight: 400;
   letter-spacing: -0.01em;
 }
 
 .bio {
   font-size: 1.15rem;
-  color: var(--text-secondary);
+  /* Larger bio text */
+  color: var(--text-muted);
+  /* Changed color */
   max-width: 650px;
-  margin-bottom: 2.5rem;
+  /* Slightly wider */
+  margin: 0 auto 2rem;
+  /* Adjusted margin */
   font-weight: 300;
   line-height: 1.7;
 }
@@ -115,80 +131,153 @@ a {
 
 .social-links {
   display: flex;
-  gap: 24px;
-  margin-bottom: 5rem;
+  justify-content: center;
+  /* Centered */
+  gap: 30px;
+  /* Increased gap */
+  margin-bottom: 0;
+  /* Removed bottom margin */
   padding-bottom: 2rem;
+  /* Kept padding */
   border-bottom: 1px solid var(--border-color);
 }
 
 .social-links a {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
+  /* Larger */
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  /* Changed color */
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 16px;
+  /* Added padding */
+  border-radius: 50px;
+  /* Pill shape */
+  background-color: #f8fafc;
+  /* Light background */
 }
 
 .social-links a:hover {
-  color: var(--accent-color);
-  transform: translateY(-1px);
+  color: var(--accent);
+  /* Changed color */
+  background-color: var(--accent-light);
+  /* New background */
+  transform: translateY(-2px);
+  /* Adjusted transform */
+}
+
+/* Main Content */
+main {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 60px 20px;
+  /* More breathing room */
+}
+
+section {
+  margin-bottom: 5rem;
+  /* Adjusted margin */
 }
 
 /* Section Headers */
 h2 {
-  font-size: 0.85rem;
+  font-size: 1.2rem;
+  /* Larger */
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--text-secondary);
+  color: var(--text-muted);
+  /* Changed color */
   margin-bottom: 2rem;
   font-weight: 700;
+  display: flex;
+  /* For line */
+  align-items: center;
+  gap: 15px;
 }
 
-section {
-  margin-bottom: 6rem;
+h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+  /* Use variable */
 }
 
 /* Projects Grid */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
+  /* Stacked but elegant */
   gap: 2rem;
 }
 
 .project-item {
   border: 1px solid var(--border-color);
-  padding: 1.75rem;
-  border-radius: 12px;
-  /* Softened corners */
-  transition: all 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.5);
-  /* Semi-transparent for mesh to show */
+  padding: 2.5rem;
+  /* More padding */
+  border-radius: 16px;
+  /* Rounder corners */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Smoother transition */
+  background: var(--bg-white);
+  /* Changed background */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  /* Soft shadow */
   backdrop-filter: blur(5px);
+  /* Kept backdrop filter */
 }
 
 .project-item:hover {
-  border-color: var(--accent-color);
+  border-color: var(--accent-light);
+  /* Changed border color */
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  /* Enhanced shadow */
+}
+
+.project-title {
+  font-size: 1.4rem;
+  /* Larger */
+  font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
 .project-title a {
   font-size: 1.25rem;
+  /* Kept original size for link */
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-main);
+  /* Changed color */
+  text-decoration: none;
+  /* Removed default underline */
+  background: linear-gradient(120deg, var(--accent-light) 0%, var(--accent-light) 100%);
+  /* Underline effect */
+  background-repeat: no-repeat;
+  background-size: 100% 0em;
+  background-position: 0 100%;
+  transition: background-size 0.2s ease;
   display: block;
   margin-bottom: 0.75rem;
 }
 
 .project-title a:hover {
-  color: var(--accent-color);
+  background-size: 100% 0.4em;
+  /* Underline effect */
+  color: var(--accent);
+  /* Changed color */
 }
 
 .project-desc {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 1.05rem;
+  /* Larger */
+  color: var(--text-muted);
+  /* Changed color */
+  line-height: 1.7;
+  /* Adjusted line height */
+  margin-bottom: 1.5rem;
+  /* Added margin */
 }
 
 /* Skills Tags */
@@ -200,34 +289,37 @@ section {
 
 .tech-stack span {
   font-family: var(--mono-font);
-  font-size: 0.75rem;
-  /* Slightly smaller for elegance */
-  background-color: var(--tag-bg);
-  /* Colored Background */
-  color: var(--tag-text);
-  /* Colored Text */
-  padding: 4px 12px;
+  font-size: 0.85rem;
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  /* Corrected variable name */
+  padding: 6px 14px;
   border-radius: 20px;
-  /* Pill shape */
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-/* Button Styles */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--accent-color);
-  color: white;
-  /* Always white for contrast */
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-  margin-top: 1.5rem;
-  border: none;
+/* Specific Colors for Skill Tags - Re-adding for polish */
+.skill-category:nth-child(1) .tech-stack span {
+  /* Data Science */
+  background-color: #f0f9ff;
+  border-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.skill-category:nth-child(2) .tech-stack span {
+  /* Engineering */
+  background-color: #f0fdf4;
+  border-color: #dcfce7;
+  color: #15803d;
+}
+
+.skill-category:nth-child(3) .tech-stack span {
+  /* Soft Skills */
+  background-color: #fdf2f8;
+  border-color: #fce7f3;
+  color: #be185d;
 }
 
 .btn-primary:hover {
@@ -254,12 +346,27 @@ section {
   display: inline-block;
 }
 
-
-
+/* Footer */
 footer {
   font-size: 0.85rem;
   color: var(--text-secondary);
   text-align: center;
-  opacity: 0.6;
-  margin-top: 4rem;
+  opacity: 0.8;
+  /* Increased opacity */
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+  header,
+  main {
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
 }
