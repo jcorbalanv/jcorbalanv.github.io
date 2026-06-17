@@ -1,54 +1,24 @@
 :root {
-  /* Modern Engineering Palette */
   --bg-color: #ffffff;
-  --text-primary: #1e293b;
-  /* Slate 800 */
-  --text-secondary: #475569;
-  /* Slate 600 */
-  --accent-color: #0f766e;
-  /* Teal 700 */
-  --accent-hover: #115e59;
-  /* Teal 800 */
-  --link-color: #0f766e;
-  --border-color: #e2e8f0;
-  /* Slate 200 */
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --border-color: #e5e7eb;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
   --card-bg: #ffffff;
-  --mono-font: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-
-  /* Visual Enhancements */
-  --gradient-title: linear-gradient(135deg, #1e293b 0%, #0f766e 100%);
-  --tag-bg: #eff6ff;
-  /* Light Indigo/Blue - very subtle */
-  --tag-text: #1e40af;
-  /* Dark Indigo/Blue */
-  --bg-gradient: radial-gradient(circle at top right, #f1f5f9, transparent 40%),
-    radial-gradient(circle at bottom left, #f0fdfa, transparent 40%);
+  --card-border: #e5e7eb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #0f172a;
-    /* Slate 900 */
-    --text-primary: #f1f5f9;
-    /* Slate 100 */
-    --text-secondary: #94a3b8;
-    /* Slate 400 */
-    --accent-color: #2dd4bf;
-    /* Teal 400 */
-    --accent-hover: #5eead4;
-    /* Teal 300 */
-    --link-color: #2dd4bf;
-    --border-color: #1e293b;
-    /* Slate 800 */
-    --card-bg: #1e293b;
-
-    --gradient-title: linear-gradient(135deg, #f1f5f9 0%, #2dd4bf 100%);
-    --tag-bg: #1e293b;
-    --tag-text: #60a5fa;
-    /* Blue 400 */
-    --bg-gradient: radial-gradient(circle at top right, #1e293b, transparent 40%),
-      radial-gradient(circle at bottom left, #134e4a, transparent 40%);
-    /* Darker teal hint */
+    --bg-color: #111827;
+    --text-primary: #f9fafb;
+    --text-secondary: #9ca3af;
+    --border-color: #374151;
+    --accent-color: #60a5fa;
+    --accent-hover: #93c5fd;
+    --card-bg: #1f2937;
+    --card-border: #374151;
   }
 }
 
@@ -61,246 +31,137 @@
 body {
   font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: var(--bg-color);
-  background-image: var(--bg-gradient);
-  /* Subtle background mesh */
-  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
-  max-width: 850px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 80px 24px;
+  padding: 60px 24px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header */
 header {
-  background: var(--bg-white);
-  padding: 80px 20px 60px;
-  /* Increased vertical padding */
-  text-align: center;
+  padding: 40px 0 60px;
   border-bottom: 1px solid var(--border-color);
-  /* Use variable */
+  margin-bottom: 60px;
 }
 
 h1 {
-  font-size: 3rem;
-  /* Larger title */
+  font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.75rem;
-  /* Adjusted margin */
-  /* Gradient Title */
-  background: linear-gradient(135deg, var(--primary-dark), var(--accent));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  /* Required for clip to work nicely */
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
 }
 
 .tagline {
-  font-size: 1.35rem;
-  /* Larger */
-  color: var(--accent);
-  /* Changed color */
+  font-size: 1.25rem;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
-  /* Adjusted margin */
   font-weight: 400;
-  letter-spacing: -0.01em;
 }
 
 .bio {
-  font-size: 1.15rem;
-  /* Larger bio text */
-  color: var(--text-muted);
-  /* Changed color */
+  font-size: 1.1rem;
+  color: var(--text-secondary);
   max-width: 650px;
-  /* Slightly wider */
-  margin: 0 auto 2rem;
-  /* Adjusted margin */
+  margin-bottom: 2rem;
   font-weight: 300;
-  line-height: 1.7;
-}
-
-/* Links & Socials */
-a {
-  color: var(--text-primary);
-  text-decoration: none;
-  transition: all 0.2s ease;
 }
 
 .social-links {
   display: flex;
-  justify-content: center;
-  /* Centered */
-  gap: 30px;
-  /* Increased gap */
-  margin-bottom: 0;
-  /* Removed bottom margin */
-  padding-bottom: 2rem;
-  /* Kept padding */
-  border-bottom: 1px solid var(--border-color);
+  gap: 20px;
 }
 
 .social-links a {
-  font-size: 1.1rem;
-  /* Larger */
-  font-weight: 500;
-  color: var(--text-muted);
-  /* Changed color */
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  /* Added padding */
-  border-radius: 50px;
-  /* Pill shape */
-  background-color: #f8fafc;
-  /* Light background */
+  transition: color 0.2s ease;
 }
 
 .social-links a:hover {
-  color: var(--accent);
-  /* Changed color */
-  background-color: var(--accent-light);
-  /* New background */
-  transform: translateY(-2px);
-  /* Adjusted transform */
+  color: var(--accent-color);
 }
 
-/* Main Content */
-main {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 60px 20px;
-  /* More breathing room */
-}
-
-section {
-  margin-bottom: 5rem;
-  /* Adjusted margin */
-}
-
-/* Section Headers */
 h2 {
-  font-size: 1.2rem;
-  /* Larger */
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  /* Changed color */
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
   margin-bottom: 2rem;
-  font-weight: 700;
-  display: flex;
-  /* For line */
-  align-items: center;
-  gap: 15px;
 }
 
-h2::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background-color: var(--border-color);
-  /* Use variable */
-}
-
-/* Projects Grid */
 .project-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  /* Stacked but elegant */
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
 .project-item {
-  border: 1px solid var(--border-color);
-  padding: 2.5rem;
-  /* More padding */
-  border-radius: 16px;
-  /* Rounder corners */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  /* Smoother transition */
-  background: var(--bg-white);
-  /* Changed background */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-  /* Soft shadow */
-  backdrop-filter: blur(5px);
-  /* Kept backdrop filter */
+  border: 1px solid var(--card-border);
+  padding: 2rem;
+  border-radius: 8px;
+  background: var(--card-bg);
+  transition: border-color 0.2s ease;
 }
 
 .project-item:hover {
-  border-color: var(--accent-light);
-  /* Changed border color */
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-  /* Enhanced shadow */
+  border-color: var(--accent-color);
 }
 
 .project-title {
-  font-size: 1.4rem;
-  /* Larger */
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
 .project-title a {
-  font-size: 1.25rem;
-  /* Kept original size for link */
-  font-weight: 600;
-  color: var(--text-main);
-  /* Changed color */
+  color: var(--text-primary);
   text-decoration: none;
-  /* Removed default underline */
-  background: linear-gradient(120deg, var(--accent-light) 0%, var(--accent-light) 100%);
-  /* Underline effect */
-  background-repeat: no-repeat;
-  background-size: 100% 0em;
-  background-position: 0 100%;
-  transition: background-size 0.2s ease;
-  display: block;
-  margin-bottom: 0.75rem;
 }
 
 .project-title a:hover {
-  background-size: 100% 0.4em;
-  /* Underline effect */
-  color: var(--accent);
-  /* Changed color */
+  color: var(--accent-color);
 }
 
 .project-desc {
-  font-size: 1.05rem;
-  /* Larger */
-  color: var(--text-muted);
-  /* Changed color */
-  line-height: 1.7;
-  /* Adjusted line height */
+  font-size: 1rem;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
-  /* Added margin */
 }
 
-/* Footer */
-footer {
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-stack span {
   font-size: 0.85rem;
+  padding: 4px 10px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 4px;
+}
+
+footer {
+  font-size: 0.9rem;
   color: var(--text-secondary);
   text-align: center;
-  opacity: 0.8;
-  /* Increased opacity */
   margin-top: 6rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-color);
 }
 
-/* Responsive */
 @media (max-width: 600px) {
-
-  header,
-  main {
+  body {
     padding: 40px 20px;
   }
-
   h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
