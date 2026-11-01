@@ -1,15 +1,27 @@
-# Portfolio Website - Jordi Corbalán
+# Portfolio — Jordi Corbalan Vilaplana
 
-Aquest repositori conté el codi font de la meva pàgina web personal.
+Web personal de recerca en machine learning, experiència professional i projectes.
 
-🔗 **Visita la web:** [https://jcorbalanv.github.io](https://jcorbalanv.github.io)
+**Web:** https://jcorbalanv.github.io
 
-## 🛠️ Tecnologies
+## Desenvolupament local
 
-- HTML5
-- CSS3 (Variables, Glassmorphism, Flexbox/Grid)
-- GitHub Pages
+Web estàtica amb HTML i CSS, sense dependències de compilació ni JavaScript. Les tipografies DM Sans i Instrument Serif es carreguen de Google Fonts, amb fonts del sistema com a alternativa.
 
-## 🚀 Desplegament
+```sh
+python3 -m http.server 4173
+```
 
-La pàgina es desplega automàticament mitjançant GitHub Pages des de la branca `main`.
+Obre http://localhost:4173. El disseny s’adapta a mòbil, tauleta i escriptori i inclou estils d’impressió, navegació per teclat i suport per a moviment reduït.
+
+## Contingut
+
+- `index.html`: perfil, recerca, experiència, projectes, formació i contacte.
+- `styles.css`: disseny i adaptació a diferents pantalles.
+- `assets/`: il·lustració de dades original en SVG i favicon.
+
+El perfil es basa en el CV facilitat; els projectes addicionals es conserven de la web anterior. Cal actualitzar manualment les dates i l’estat de les publicacions quan canviïn.
+
+## Desplegament
+
+GitHub Pages publica el repositori des de la branca `main`. Els PDF dels currículums es conserven localment i s’exclouen del repositori amb `.gitignore`.
